@@ -1,13 +1,11 @@
 
-/* 
-*{
+ 
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
-body{
-    /* overflow: hidden; */
-}
+}  */
+
 .background{
     background-image: url("../pics/viktor-forgacs-Bvo2-SNi0rw-unsplash.jpg");
     height: 100vh;

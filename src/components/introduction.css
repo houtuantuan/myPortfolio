@@ -1,0 +1,9 @@
+
+ #mint{
+    font-size: 1.3em;
+  text-shadow: 4px 4px 0px #04ffff;
+  mix-blend-mode: screen;
+  position: relative;
+  bottom:7px
+ }
+

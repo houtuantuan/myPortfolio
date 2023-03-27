@@ -8,177 +8,74 @@ import Typography from '@mui/material/Typography'
 
 import Button from '@mui/material/Button'
 import { margin } from '@mui/system'
+import { Container } from '@mui/system'
+import ReactCardFlip from 'react-card-flip'
+import { useState } from 'react'
+import FrontFindIp from './projects/FrontFindIp'
+import BackFindIp from './projects/BackFindIp'
 
 export default function Projects () {
   const theme = useTheme()
 
+  const projects = [
+    {
+      name: 'Find Your IP',
+      description:"Javascript, React & UI Material",
+      image:
+        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
+    },
+    {
+      name: 'Cooking Book',
+      description:"Javascript, React & UI Material",
+      image:
+        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
+    },
+    {
+      name: 'Placeholder',
+      description:"Javascript, React & UI Material",
+      image:
+        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
+    }
+  ]
+  const [flipped, setFlipped] = useState(Array(projects.length).fill(false))
+
+  const flip = (index) => setFlipped(prevStates => {
+    return prevStates.map((state,i) =>{
+      if(index === i){
+        return !state
+      }
+      return state
+    })
+  })
+
   return (
     <Box
-      backgroundColor='#e0e0e0'
+      backgroundColor='#f4f4f4'
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        
       }}
     >
-      <h1 style={{}}>My Projects</h1>
-      
-      <Card 
-        sx={{
-          display: 'flex',
-          border: 'solid',
-          width: '70%',
-          height: '35vh',
-          justifyContent: 'center',
-          my:3
+      <Container
+        sx={{ mt: 5, fontSize: '3em', fontWeight: 'bold', textAlign: 'center' }}
+      >
+        My Projects
+      </Container>
+      {projects.map((project,index) => {
+        return (
+          <Box my={"5%"}
           
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            border: 'solid',
-            width: '35em'
-          }}
-        >
-          <CardContent sx={{ flex: '1 0 auto' }}>
-            <Typography component='div' variant='h5'>
-              Find your IP
-            </Typography>
-            <Typography
-              variant='subtitle1'
-              color='text.secondary'
-              component='div'
-            >
-              Mac Miller
-            </Typography>
-          </CardContent>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              pl: 1,
-              pb: 1,
-              width: '100%',
-              
-            }}
-          >
-            <Button>View live</Button>
-            <Button>code</Button>
-          </Box>
-        </Box>
-        <CardMedia
-          component='img'
-          sx={{ width: '15em ' }}
-          image='https://images.unsplash.com/photo-1679215805559-3f8000e4b6ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-          alt='Live from space album cover'
+          onMouseEnter={()=>flip(index)} onMouseLeave={()=>flip(index)} key={index}>
+            <ReactCardFlip isFlipped={flipped[index]} flipDirection='vertical'>
+              <FrontFindIp image={project.image}  />
 
-        />
-      </Card>
-      <Card
-        sx={{
-          display: 'flex',
-          border: 'solid',
-          width: '70%',
-          height: '35vh',
-          justifyContent: 'center',
-          my:3
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            border: 'solid',
-            width: '35em'
-          }}
-        >
-          <CardContent sx={{ flex: '1 0 auto' }}>
-            <Typography component='div' variant='h5'>
-              Find your IP
-            </Typography>
-            <Typography
-              variant='subtitle1'
-              color='text.secondary'
-              component='div'
-            >
-              Mac Miller
-            </Typography>
-          </CardContent>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              pl: 1,
-              pb: 1,
-              width: '100%'
-            }}
-          >
-            <Button>View live</Button>
-            <Button>code</Button>
+              <BackFindIp name={project.name} description={project.description}/>
+            </ReactCardFlip>
           </Box>
-        </Box>
-        <CardMedia
-          component='img'
-          sx={{ width: '15em ' }}
-          image='https://images.unsplash.com/photo-1679215805559-3f8000e4b6ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-          alt='Live from space album cover'
-        />
-      </Card>
-      <Card
-        sx={{
-          display: 'flex',
-          border: 'solid',
-          width: '70%',
-          height: '35vh',
-          justifyContent: 'center',
-          my:3
-        }}
-      >
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            border: 'solid',
-            width: '35em'
-          }}
-        >
-          <CardContent sx={{ flex: '1 0 auto' }}>
-            <Typography component='div' variant='h5'>
-              Find your IP
-            </Typography>
-            <Typography
-              variant='subtitle1'
-              color='text.secondary'
-              component='div'
-            >
-              Mac Miller
-            </Typography>
-          </CardContent>
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              pl: 1,
-              pb: 1,
-              width: '100%'
-            }}
-          >
-            <Button>View live</Button>
-            <Button>code</Button>
-          </Box>
-        </Box>
-        <CardMedia
-          component='img'
-          sx={{ width: '15em ' }}
-          image='https://images.unsplash.com/photo-1679215805559-3f8000e4b6ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-          alt='Live from space album cover'
-        />
-      </Card>
+        )
+      })}
     </Box>
   )
 }

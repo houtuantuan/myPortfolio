@@ -13,7 +13,7 @@ export default function AboutMe () {
           justifyContent: 'center',
           alignItems: 'center',
           p: 1,
-          m: 5,
+          my: 5,
           bgcolor: 'background.paper',
           borderRadius: 1,
           width: '100%',

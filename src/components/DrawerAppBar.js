@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import "./DrawerAppBar.css"
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', "Projects",'Contact'];
@@ -28,10 +29,7 @@ function DrawerAppBar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
-            </Typography>
-            <Divider />
+            
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
@@ -47,9 +45,9 @@ function DrawerAppBar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex'}}>
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar component="nav" sx={{width:"100%",background: '#2E3B55'}}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -63,13 +61,14 @@ function DrawerAppBar(props) {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block',border:"solid" } }}
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        className="logo"
                     >
-                        mui
+                        X
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block',border:"solid" } }}>
+                    <Box sx={{ display: { xs: 'none', sm: 'block'} }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
+                            <Button key={item} sx={{ color: '#fff',fontWeight:"400" }}>
                                 {item}
                             </Button>
                         ))}
@@ -87,7 +86,7 @@ function DrawerAppBar(props) {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },border:"solid"
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },border:"solid red"
                     }}
                 >
                     {drawer}
