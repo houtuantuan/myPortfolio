@@ -5,7 +5,7 @@ import '@animxyz/core'
 import Introduction from './Introduction'
 import Button from '@mui/material/Button'
 
-export default function Background ({scrollDown,About}) {
+export default function Background ({scrollDown,aboutSection}) {
   return (
     <>
     <div className='background'>
@@ -21,7 +21,7 @@ export default function Background ({scrollDown,About}) {
         <span className='star'></span>
         <span className='star'></span>
       </section>
-      <Introduction scrollDown={scrollDown} About={About}/>
+      <Introduction scrollDown={scrollDown} aboutSection={aboutSection}/>
      
     </div>
     

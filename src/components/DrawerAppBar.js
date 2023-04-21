@@ -16,16 +16,21 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import './DrawerAppBar.css'
 import { useRef } from 'react'
-import ScrollToTop from "react-scroll-to-top";
-
+import ScrollToTop from 'react-scroll-to-top'
 
 const drawerWidth = 240
-const navItems = ['Home', 'About', 'Projects', 'Contact']
 
 function DrawerAppBar (props) {
-  const bbb = props.About
+  
+  const navItems = [
+    { name: 'Home', refName: props.homeSection },
+    { name: 'About', refName: props.aboutSection },
+    { name: 'projects', refName: props.projectsSection },
+    { name: 'Contact', refName: props.contactSection }
+    
+  ]
 
- const aaa =props.scrollDown
+  const aaa = props.scrollDown
   const { window } = props
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
@@ -37,9 +42,9 @@ function DrawerAppBar (props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
         {navItems.map(item => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.name} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -51,7 +56,7 @@ function DrawerAppBar (props) {
     window !== undefined ? () => window().document.body : undefined
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} ref={props.homeSection}>
       <CssBaseline />
       <AppBar component='nav' sx={{ width: '100%', background: '#2E3B55' }}>
         <Toolbar>
@@ -75,11 +80,11 @@ function DrawerAppBar (props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map(item => (
               <Button
-                key={item}
+                key={item.name}
                 sx={{ color: '#fff', fontWeight: '400' }}
-                onClick={()=>aaa(bbb)}
+                onClick={() => aaa(item.refName)}
               >
-                {item}
+                {item.name}
               </Button>
             ))}
           </Box>

@@ -26,7 +26,7 @@ const theme = createTheme({
   }
 })
 
-export default function Introduction ({scrollDown,About}) {
+export default function Introduction ({scrollDown,aboutSection}) {
  
 
  
@@ -88,7 +88,7 @@ export default function Introduction ({scrollDown,About}) {
             Front End Developer
           </Box>
           <Box textAlign='center'>
-            <Button variant='outlined' color='primary' onClick={()=>scrollDown(About)} >
+            <Button variant='outlined' color='primary' onClick={()=>scrollDown(aboutSection)} >
               View my work
             </Button>
           </Box>

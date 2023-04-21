@@ -14,7 +14,7 @@ import { useState, useRef } from 'react'
 import FrontFindIp from './projects/FrontFindIp'
 import BackFindIp from './projects/BackFindIp'
 
-export default function Projects ({ Projects }) {
+export default function Projects ({ projectsSection }) {
   const theme = useTheme()
 
   const projects = [
@@ -51,7 +51,7 @@ export default function Projects ({ Projects }) {
 
   return (
     <Box
-      ref={Projects}
+      ref={projectsSection}
       backgroundColor='#f4f4f4'
       sx={{
         display: 'flex',
