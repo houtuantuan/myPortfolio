@@ -38,7 +38,7 @@ function App () {
         homeSection={homeSection}
       />
 
-      <Background scrollDown={scrollDown} aboutSection={aboutSection} />
+      <Background scrollDown={scrollDown} projectsSection={projectsSection} />
       <ScrollToTop />
       <AboutMe aboutSection={aboutSection} />
       <Projects projectsSection={projectsSection} />

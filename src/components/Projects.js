@@ -56,7 +56,8 @@ export default function Projects ({ projectsSection }) {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        paddingTop:"1em"
       }}
     >
       <Container

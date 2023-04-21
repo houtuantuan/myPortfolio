@@ -9,8 +9,8 @@ export default function AboutMe ({aboutSection}) {
   
  
   return (
-    <div style={{width: '100%'}} ref={aboutSection}>
-      <Box
+    <div style={{width: '100%', border:"solid white"}}ref={aboutSection} >
+      <Box 
         sx={{
           display: 'flex',
           flexDirection: 'column',
