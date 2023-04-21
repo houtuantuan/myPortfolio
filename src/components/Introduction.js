@@ -8,6 +8,7 @@ import { spacing } from '@mui/system'
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider } from '@emotion/react'
 import './introduction.css'
+import { useRef } from 'react'
 
 const theme = createTheme({
   status: {
@@ -25,7 +26,10 @@ const theme = createTheme({
   }
 })
 
-export default function Introduction () {
+export default function Introduction ({scrollDown,About}) {
+ 
+
+ 
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -84,7 +88,7 @@ export default function Introduction () {
             Front End Developer
           </Box>
           <Box textAlign='center'>
-            <Button variant='outlined' color='primary'>
+            <Button variant='outlined' color='primary' onClick={()=>scrollDown(About)} >
               View my work
             </Button>
           </Box>

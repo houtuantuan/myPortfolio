@@ -1,11 +1,15 @@
 import React from 'react'
 import { Box, Container } from '@mui/system'
 import Button from '@mui/material/Button'
+import { useRef } from 'react';
 
 
-export default function AboutMe () {
+export default function AboutMe ({About}) { 
+ 
+  
+ 
   return (
-    <div style={{width: '100%'}}>
+    <div style={{width: '100%'}} ref={About}>
       <Box
         sx={{
           display: 'flex',

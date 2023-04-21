@@ -9,13 +9,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
-export default function Contact () {
+export default function Contact ({contactSection}) {
+  
   return (
-    <Box>
-      <Grid sx={{  backgroundColor: 'white' }}>
+    <Box ref={contactSection}>
+      <Grid sx={{  backgroundColor: 'white',marginBottom:"2em" }}>
         <Card
           style={{
-            height: '80vh',
+            height: '80%',
             maxWidth: 450,
             padding: '20px 5px',
             margin: '0 auto',
@@ -102,51 +103,7 @@ export default function Contact () {
           </CardContent>
         </Card>
       </Grid>
-      <Box sx={{ backgroundColor: '#242830',
-       height: '15vh',
-       minHeight:"150px" 
-       }}>
-        <Box
-          sx={{
-            color: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            // border: 'solid pink',
-            paddingTop:"35px"
-          }}
-        >
-          <span>
-            <LinkedInIcon sx={{ marginRight: '10px' }} />
-            <GitHubIcon sx={{ marginLeft: '10px' }} />
-          </span>
-          <Typography> © 2023 Xiaoyan Hou, All Rights Reserved.</Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              height: '40%',
-              maxHeight: '10vh',
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end',
-            //   border: 'solid red',
-              width:"100%",
-              color:"black"
-            }}
-          >
-            <ArrowUpwardIcon
-              sx={{
-                border: 'solid white',
-                backgroundColor: 'white',
-                fontSize:40,
-                position:"relative",
-                top:"16px",
-                right:"2px"
-              }}
-            />
-          </Box>
-        </Box>
-      </Box>
+     
     </Box>
   )
 }

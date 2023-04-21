@@ -10,52 +10,53 @@ import Button from '@mui/material/Button'
 import { margin } from '@mui/system'
 import { Container } from '@mui/system'
 import ReactCardFlip from 'react-card-flip'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import FrontFindIp from './projects/FrontFindIp'
 import BackFindIp from './projects/BackFindIp'
 
-export default function Projects () {
+export default function Projects ({ Projects }) {
   const theme = useTheme()
 
   const projects = [
     {
       name: 'Find Your IP',
-      description:"Javascript, React & UI Material",
+      description: 'Javascript, React & UI Material',
       image:
         'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
     },
     {
       name: 'Cooking Book',
-      description:"Javascript, React & UI Material",
+      description: 'Javascript, React & UI Material',
       image:
         'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
     },
     {
       name: 'Placeholder',
-      description:"Javascript, React & UI Material",
+      description: 'Javascript, React & UI Material',
       image:
         'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
     }
   ]
   const [flipped, setFlipped] = useState(Array(projects.length).fill(false))
 
-  const flip = (index) => setFlipped(prevStates => {
-    return prevStates.map((state,i) =>{
-      if(index === i){
-        return !state
-      }
-      return state
+  const flip = index =>
+    setFlipped(prevStates => {
+      return prevStates.map((state, i) => {
+        if (index === i) {
+          return !state
+        }
+        return state
+      })
     })
-  })
 
   return (
     <Box
+      ref={Projects}
       backgroundColor='#f4f4f4'
       sx={{
         display: 'flex',
         alignItems: 'center',
-        flexDirection: 'column',
-        
+        flexDirection: 'column'
       }}
     >
       <Container
@@ -63,15 +64,21 @@ export default function Projects () {
       >
         My Projects
       </Container>
-      {projects.map((project,index) => {
+      {projects.map((project, index) => {
         return (
-          <Box my={"5%"}
-          
-          onMouseEnter={()=>flip(index)} onMouseLeave={()=>flip(index)} key={index}>
+          <Box
+            my={'5%'}
+            onMouseEnter={() => flip(index)}
+            onMouseLeave={() => flip(index)}
+            key={index}
+          >
             <ReactCardFlip isFlipped={flipped[index]} flipDirection='vertical'>
-              <FrontFindIp image={project.image}  />
+              <FrontFindIp image={project.image} />
 
-              <BackFindIp name={project.name} description={project.description}/>
+              <BackFindIp
+                name={project.name}
+                description={project.description}
+              />
             </ReactCardFlip>
           </Box>
         )
