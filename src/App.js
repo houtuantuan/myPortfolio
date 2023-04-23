@@ -9,6 +9,7 @@ import Contact from './components/Contact.js'
 import Footer from './components/Footer.js'
 import ScrollToTop from 'react-scroll-to-top'
 import { useRef } from 'react'
+import EmailContact from "./components/EmailContact.js"
 
 function App () {
   const aboutSection = useRef(null)
@@ -42,8 +43,10 @@ function App () {
       <ScrollToTop />
       <AboutMe aboutSection={aboutSection} />
       <Projects projectsSection={projectsSection} />
-      <Contact contactSection={contactSection}/>
-      <Footer />
+      {/* <Contact contactSection={contactSection}/> */}
+      
+      <EmailContact contactSection={contactSection}/>
+       <Footer />
     </div>
   )
 }

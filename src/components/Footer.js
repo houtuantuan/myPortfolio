@@ -8,8 +8,9 @@ import React from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
-import useScrollTrigger from "@mui/material/useScrollTrigger";
- 
+import useScrollTrigger from '@mui/material/useScrollTrigger'
+import { Link } from 'react-router-dom'
+import { IconButton } from '@mui/material';
 
 export default function Footer () {
   return (
@@ -23,13 +24,21 @@ export default function Footer () {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-        //   border: 'solid pink',
+          //   border: 'solid pink',
           paddingTop: '35px'
         }}
       >
         <span>
-          <LinkedInIcon sx={{ marginRight: '10px' }} />
-          <GitHubIcon sx={{ marginLeft: '10px' }} />
+        <IconButton href="https://github.com/houtuantuan" target="_blank">
+          <LinkedInIcon
+            sx={{ marginRight: '12px',color:"white" }}
+            
+          />
+          </IconButton >
+          <IconButton href="https://www.linkedin.com/in/xiaoyanhouwebdeveloper/" target="_blank">
+         <GitHubIcon sx={{ marginLeft: '12px',color:"white" }} />
+          </IconButton >
+          
         </span>
         <Typography> © 2023 Xiaoyan Hou, All Rights Reserved.</Typography>
         <Box
@@ -43,10 +52,7 @@ export default function Footer () {
             width: '100%',
             color: 'black'
           }}
-        >
-          
-          
-        </Box>
+        ></Box>
       </Box>
     </Box>
   )

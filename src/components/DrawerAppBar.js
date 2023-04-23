@@ -21,13 +21,11 @@ import ScrollToTop from 'react-scroll-to-top'
 const drawerWidth = 240
 
 function DrawerAppBar (props) {
-  
   const navItems = [
     { name: 'Home', refName: props.homeSection },
     { name: 'About', refName: props.aboutSection },
-    { name: 'projects', refName: props.projectsSection },
+    { name: 'Projects', refName: props.projectsSection },
     { name: 'Contact', refName: props.contactSection }
-    
   ]
 
   const aaa = props.scrollDown
@@ -43,7 +41,10 @@ function DrawerAppBar (props) {
       <List>
         {navItems.map(item => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              sx={{ textAlign: 'center' }}
+              onClick={() => aaa(item.refName)}
+            >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -65,7 +66,7 @@ function DrawerAppBar (props) {
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2,  display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -77,11 +78,13 @@ function DrawerAppBar (props) {
           >
             X
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box
+            sx={{  display: { xs: 'none', sm: 'block' } }}
+          >
             {navItems.map(item => (
               <Button
                 key={item.name}
-                sx={{ color: '#fff', fontWeight: '400' }}
+                sx={{ color: '#fff', fontWeight: '800' }}
                 onClick={() => aaa(item.refName)}
               >
                 {item.name}
@@ -90,7 +93,7 @@ function DrawerAppBar (props) {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component='nav'>
+      <Box component='nav' >
         <Drawer
           container={container}
           variant='temporary'
@@ -104,8 +107,7 @@ function DrawerAppBar (props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth
-            },
-            border: 'solid red'
+            }
           }}
         >
           {drawer}

@@ -5,11 +5,17 @@ import { TextField } from '@mui/material'
 import { CardContent } from '@mui/material'
 import { Grid, Box, Container } from '@mui/material'
 import React from 'react'
+import { useState } from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export default function Contact ({contactSection}) {
+  const [firstName,setFirstName]=useState(null)
+  const [lastName,setLastName]=useState(null)
+  const [email,setEmail]=useState(null)
+
+
   
   return (
     <Box ref={contactSection}>
@@ -42,6 +48,7 @@ export default function Contact ({contactSection}) {
               <Grid container spacing={1}>
                 <Grid xs={12} sm={6} item>
                   <TextField
+                  value={firstName}
                     placeholder='Enter first name'
                     label='First Name'
                     variant='outlined'
