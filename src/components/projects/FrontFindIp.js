@@ -17,7 +17,7 @@ export default function Front ({ image }) {
       <Box
         sx={{
           maxWidth: '600px',
-          width:"40em",
+          width:"35em",
           height: '25em',
           boxShadow: '10px 10px 5px rgb(95, 77, 99)',
           borderRadius: '10px'

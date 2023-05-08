@@ -31,7 +31,7 @@ const schema = {
 }
 
 const EmailContact = ({ contactSection }) => {
-const [emailIsSent,setEmailIsSent]=useState(false)
+  const [emailIsSent, setEmailIsSent] = useState(false)
 
   const sendEmail = e => {
     e.preventDefault()
@@ -41,8 +41,8 @@ const [emailIsSent,setEmailIsSent]=useState(false)
       .then(res => {
         console.log('SUCCESS!', res.status, res.text)
         setEmailIsSent(true)
-        setTimeout(()=>setEmailIsSent(false),10000)
-    })
+        setTimeout(() => setEmailIsSent(false), 10000)
+      })
       .catch(error => console.log('FAILED...', error))
 
     setFormState(formState => ({
@@ -103,17 +103,25 @@ const [emailIsSent,setEmailIsSent]=useState(false)
             maxWidth: 650,
             padding: '30px 5px',
             margin: '1em auto',
-            
+
             boxShadow: 'none',
             backgroundColor: 'white'
           }}
         >
           <Grid container spacing={2}>
-            <Grid item xs={12} sx={{margin:"1em"}}>
-              <Typography variant='h4' align='center' sx={{fontSize:"3em"}}>
-                <strong>Contact </strong>
+            <Grid item xs={12} sx={{ margin: '1em' }}>
+              <Typography variant='h4' align='center' sx={{ fontSize: '3em' }}>
+                <strong>Contact me</strong>
               </Typography>
             </Grid>
+            <Grid item xs={12} sm={12}>
+              <Typography>
+                Contact via E-Mail:
+                <strong>xiaoyan.hou@hotmail.com </strong>
+                <br /> or leave a message
+              </Typography>
+            </Grid>
+
             <Grid item xs={12} sm={6}>
               <TextField
                 placeholder='Name'
@@ -158,26 +166,43 @@ const [emailIsSent,setEmailIsSent]=useState(false)
                 name='message'
                 id='message'
                 fullWidth
-                
                 error={hasError('message')}
                 onChange={handleChange}
                 type='text'
                 value={formState.values.message || ''}
               />
             </Grid>
-            {emailIsSent ?(<Grid item xs={12} sx={{display:"flex", justifyContent:"center",marginTop:"1em"}}>
+            {emailIsSent ? (
+              <Grid
+                item
+                xs={12}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  marginTop: '1em'
+                }}
+              >
                 <Typography>Your message has been sent.</Typography>
-            </Grid>):<></>
-            }
-            
-            <Grid item xs={12} sx={{display:"flex", justifyContent:"center",marginTop:"1em"}}>
+              </Grid>
+            ) : (
+              <></>
+            )}
+
+            <Grid
+              item
+              xs={12}
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: '1em'
+              }}
+            >
               <Button
                 size='large'
                 variant='contained'
                 type='submit'
                 color='primary'
                 disabled={!formState.isValid}
-                
               >
                 Send
               </Button>

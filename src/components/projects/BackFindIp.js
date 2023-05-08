@@ -10,7 +10,8 @@ export default function BackFindIp ({ name, description, codeUrl, liveUrl }) {
         sx={{
           background: '#2E3B55',
           maxWidth: '600px',
-          width:"40em",
+          minWidth:"450px",
+          width:"35em",
           height: '25em',
           display: 'flex',
           flexDirection: 'column',

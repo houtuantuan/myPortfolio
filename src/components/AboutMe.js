@@ -48,7 +48,7 @@ export default function AboutMe ({ aboutSection }) {
         <Container>
           I'm a result-driven web developer passionate about software
           architecture and design who can realise elegant projects from ground
-          up. 
+          up.
           <br />
           Connect with me, and let's create something special.
         </Container>
@@ -104,8 +104,12 @@ export default function AboutMe ({ aboutSection }) {
             s
           </Card>
         </Container> */}
-        <Stack direction='row' spacing={2} useFlexGap flexWrap="wrap"
-        sx={{display:"flex",justifyContent:"center"}}
+        <Stack
+          direction='row'
+          spacing={2}
+          useFlexGap
+          flexWrap='wrap'
+          sx={{ display: 'flex', justifyContent: 'center' }}
         >
           <List
             sx={{
@@ -223,7 +227,7 @@ export default function AboutMe ({ aboutSection }) {
             variant='outlined'
             color='primary'
             target='_blank'
-            href='https://drive.google.com/file/d/0B0TSN7DhB4WNaUNCUk9PTFlROWM/view?usp=share_link&resourcekey=0-151u4nmFe9Nztz7PjmfCcw'
+            href='https://drive.google.com/file/d/1not56sJG76K-K2nfQJk7YXTUgsty1v37/view?usp=share_link'
           >
             View Resume
           </Button>
