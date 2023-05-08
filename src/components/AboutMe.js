@@ -48,7 +48,9 @@ export default function AboutMe ({ aboutSection }) {
         <Container>
           I'm a result-driven web developer passionate about software
           architecture and design who can realise elegant projects from ground
-          up. Connect with me, and let's create something special.
+          up. 
+          <br />
+          Connect with me, and let's create something special.
         </Container>
         <Container sx={{ mb: 5 }}>
           <img
@@ -102,132 +104,119 @@ export default function AboutMe ({ aboutSection }) {
             s
           </Card>
         </Container> */}
-        <Stack direction='row' spacing={2}>
-          <List  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    
-                  
-                  }}>
+        <Stack direction='row' spacing={2} useFlexGap flexWrap="wrap"
+        sx={{display:"flex",justifyContent:"center"}}
+        >
+          <List
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='html5' src={html5} />
             <Typography variant='caption'>HTML5</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='css' src={css3} />
             <Typography variant='caption'>CSS3</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='js' src={javascript} />
             <Typography variant='caption'>JS</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='bootstrap' src={bootstrap} />
             <Typography variant='caption'>BOOTSTRAP</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='react' src={reactlogo} />
             <Typography variant='caption'>REACT</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='mui' src={mui} />
             <Typography variant='caption'>MUI</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='nodejs' src={nodejs} />
             <Typography variant='caption'>NODEJS</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
             <Avatar alt='expressjs' src={expressjs} />
             <Typography variant='caption'>EXPRESSJS</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
-          <Avatar alt='mongodb' src={mongodb} />
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
+            <Avatar alt='mongodb' src={mongodb} />
             <Typography variant='caption'>MONGODB</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
-          <Avatar alt='git' src={git} />
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
+            <Avatar alt='git' src={git} />
             <Typography variant='caption'>GIT</Typography>
           </List>
           <List
-           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            
-          
-          }}>
-          <Avatar alt='github' src={githublogo} />
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
+            }}
+          >
+            <Avatar alt='github' src={githublogo} />
             <Typography variant='caption'>GITHUB</Typography>
           </List>
-
-          
-          
-
-          
         </Stack>
         <Box sx={{ my: 2, textAlign: 'center' }}>
           <Button

@@ -3,14 +3,15 @@ import { Container, Box } from '@mui/system'
 import Typography from '@mui/material/Typography'
 import { Button } from '@mui/material'
 
-export default function BackFindIp ({ name, description }) {
+export default function BackFindIp ({ name, description, codeUrl, liveUrl }) {
   return (
     <Container>
       <Box
         sx={{
           background: '#2E3B55',
-          width: '60vw',
-          height: '50vh',
+          maxWidth: '600px',
+          width:"40em",
+          height: '25em',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -24,7 +25,14 @@ export default function BackFindIp ({ name, description }) {
         <Typography variant='p' m={3}>
           {description}
         </Typography>
-        <Button variant='outlined'>Explore more</Button>
+        <a target='blank' href={codeUrl}>
+          <Button sx={{marginBottom:"1em"}}
+          variant='outlined'>Code</Button>
+        </a>
+
+        <a target='blank' href={liveUrl}>
+          <Button variant='outlined'>View live</Button>
+        </a>
       </Box>
     </Container>
   )

@@ -13,29 +13,39 @@ import ReactCardFlip from 'react-card-flip'
 import { useState, useRef } from 'react'
 import FrontFindIp from './projects/FrontFindIp'
 import BackFindIp from './projects/BackFindIp'
+import colorGalley from "../pics/colorGallery.png"
+import checkIp from "../pics/checkIp.png"
+import cookingBook from "../pics/cookingBook.png"
+import { Grid } from '@mui/material'
 
 export default function Projects ({ projectsSection }) {
   const theme = useTheme()
 
   const projects = [
     {
+      name: 'Color Gallery',
+      description: 'Javascript, React, NodeJS, Mongoose & UI Material',
+      image:colorGalley,
+      codeUrl:"https://github.com/houtuantuan/Online-Gallerie-Frontend",
+      liveUrl:"https://houtuantuan.github.io/Online-Gallerie-Frontend/"
+        
+    },
+    {
       name: 'Find Your IP',
-      description: 'Javascript, React & UI Material',
-      image:
-        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
+      description: 'Javascript, React & Tailwind',
+      image:checkIp,
+      codeUrl:"https://github.com/houtuantuan/showYourIP",
+      liveUrl:"https://642ea47328851814df79656c--enchanting-banoffee-de56f5.netlify.app/"
     },
     {
       name: 'Cooking Book',
-      description: 'Javascript, React & UI Material',
-      image:
-        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
-    },
-    {
-      name: 'Placeholder',
-      description: 'Javascript, React & UI Material',
-      image:
-        'https://78.media.tumblr.com/d98fb931adb117c70f0dbced9e947520/tumblr_pe582mbWip1tlgv32o1_1280.png'
-    }
+      description: 'Javascript, React, Contentful as CMS & UI Material',
+      image:cookingBook,
+      codeUrl:"https://github.com/houtuantuan/cookingBook",
+      liveUrl:"https://houtuantuan.github.io/cookingBook/"
+    
+    
+      }
   ]
   const [flipped, setFlipped] = useState(Array(projects.length).fill(false))
 
@@ -58,6 +68,7 @@ export default function Projects ({ projectsSection }) {
         alignItems: 'center',
         flexDirection: 'column',
         paddingTop:"1em"
+       
       }}
     >
       <Container
@@ -68,17 +79,25 @@ export default function Projects ({ projectsSection }) {
       {projects.map((project, index) => {
         return (
           <Box
+           
             my={'5%'}
             onMouseEnter={() => flip(index)}
             onMouseLeave={() => flip(index)}
             key={index}
+            
+            
           >
             <ReactCardFlip isFlipped={flipped[index]} flipDirection='vertical'>
-              <FrontFindIp image={project.image} />
+              <FrontFindIp 
+              
+              
+              image={project.image} />
 
               <BackFindIp
                 name={project.name}
                 description={project.description}
+                codeUrl={project.codeUrl}
+                liveUrl={project.liveUrl}
               />
             </ReactCardFlip>
           </Box>
