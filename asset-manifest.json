@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/myPortfolio/static/css/main.2d7fce26.css",
-    "main.js": "/myPortfolio/static/js/main.63d4f514.js",
+    "main.js": "/myPortfolio/static/js/main.1ddc60a3.js",
     "static/media/cookingBook.png": "/myPortfolio/static/media/cookingBook.e31e43998a2a27b40611.png",
     "static/media/viktor-forgacs-Bvo2-SNi0rw-unsplash.jpg": "/myPortfolio/static/media/viktor-forgacs-Bvo2-SNi0rw-unsplash.fcc32e217e9475843e28.jpg",
     "static/media/colorGallery.png": "/myPortfolio/static/media/colorGallery.ef91fd310bce9a8d128c.png",
     "static/media/checkIp.png": "/myPortfolio/static/media/checkIp.2525449256b5ba75a87b.png",
+    "static/media/Bewerbungsfoto-XiaoyanHou.jpg": "/myPortfolio/static/media/Bewerbungsfoto-XiaoyanHou.21b0270b516f51d15641.jpg",
     "static/media/roboto-all-500-normal.woff": "/myPortfolio/static/media/roboto-all-500-normal.0ab669b7a0d19b178f57.woff",
     "static/media/roboto-all-700-normal.woff": "/myPortfolio/static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
     "static/media/roboto-all-400-normal.woff": "/myPortfolio/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
@@ -40,10 +41,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/myPortfolio/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/myPortfolio/index.html",
     "main.2d7fce26.css.map": "/myPortfolio/static/css/main.2d7fce26.css.map",
-    "main.63d4f514.js.map": "/myPortfolio/static/js/main.63d4f514.js.map"
+    "main.1ddc60a3.js.map": "/myPortfolio/static/js/main.1ddc60a3.js.map"
   },
   "entrypoints": [
     "static/css/main.2d7fce26.css",
-    "static/js/main.63d4f514.js"
+    "static/js/main.1ddc60a3.js"
   ]
 }
