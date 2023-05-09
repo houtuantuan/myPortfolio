@@ -228,7 +228,7 @@ export default function AboutMe ({ aboutSection }) {
             variant='outlined'
             color='primary'
             target='_blank'
-            href='https://drive.google.com/file/d/1not56sJG76K-K2nfQJk7YXTUgsty1v37/view?usp=share_link'
+            href="https://drive.google.com/file/d/1jgsdZGCA0fC4WcNGSQBFBXOcgvTNIdDk/view?usp=share_link"
           >
             View Resume
           </Button>
