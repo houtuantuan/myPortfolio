@@ -24,7 +24,7 @@ export default function Projects ({ projectsSection }) {
   const projects = [
     {
       name: 'Color Gallery',
-      description: 'Javascript, React, NodeJS, Mongoose & UI Material',
+      description: 'Javascript, React, NodeJS, Mongoose, REST & UI Material',
       image:colorGalley,
       codeUrl:"https://github.com/houtuantuan/Online-Gallerie-Frontend",
       liveUrl:"https://houtuantuan.github.io/Online-Gallerie-Frontend/"

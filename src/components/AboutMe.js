@@ -23,6 +23,7 @@ import ListItemText from '@mui/material/ListItemText'
 import ListItemAvatar from '@mui/material/ListItemAvatar'
 import Typography from '@mui/material/Typography'
 import ListItemButton from '@mui/material/ListItemButton'
+import bewerbungsfoto from "../pics/Bewerbungsfoto-XiaoyanHou.jpg"
 
 export default function AboutMe ({ aboutSection }) {
   const frontend = ['HTML5', 'CSS3', 'JS', 'REACT', 'MUI', 'BOOTSTRAP']
@@ -54,8 +55,8 @@ export default function AboutMe ({ aboutSection }) {
         </Container>
         <Container sx={{ mb: 5 }}>
           <img
-            src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2'
-            style={{ borderRadius: '80%', width: '15em', marginTop: '2em' }}
+            src={bewerbungsfoto}
+            style={{ borderRadius: '90%', width: '12em', marginTop: '2em' }}
           />
         </Container>
         {/* <Container sx={{ display: 'flex', justifyContent: 'center' }}>
