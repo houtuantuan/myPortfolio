@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/myPortfolio/static/css/main.2d7fce26.css",
-    "main.js": "/myPortfolio/static/js/main.dd3728d2.js",
+    "main.js": "/myPortfolio/static/js/main.9f9b1498.js",
     "static/media/cookingBook.png": "/myPortfolio/static/media/cookingBook.e31e43998a2a27b40611.png",
     "static/media/viktor-forgacs-Bvo2-SNi0rw-unsplash.jpg": "/myPortfolio/static/media/viktor-forgacs-Bvo2-SNi0rw-unsplash.fcc32e217e9475843e28.jpg",
     "static/media/colorGallery.png": "/myPortfolio/static/media/colorGallery.ef91fd310bce9a8d128c.png",
@@ -41,10 +41,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/myPortfolio/static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "/myPortfolio/index.html",
     "main.2d7fce26.css.map": "/myPortfolio/static/css/main.2d7fce26.css.map",
-    "main.dd3728d2.js.map": "/myPortfolio/static/js/main.dd3728d2.js.map"
+    "main.9f9b1498.js.map": "/myPortfolio/static/js/main.9f9b1498.js.map"
   },
   "entrypoints": [
     "static/css/main.2d7fce26.css",
-    "static/js/main.dd3728d2.js"
+    "static/js/main.9f9b1498.js"
   ]
 }
