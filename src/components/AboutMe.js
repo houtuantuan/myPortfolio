@@ -16,11 +16,13 @@ import mongodb from './icons/icons8-mongodb-a-cross-platform-document-oriented-d
 import reactlogo from './icons/icons8-react-96.png'
 import git from './icons/icons8-git-96.png'
 import githublogo from './icons/icons8-github-100.png'
+import angular from './icons/icons8-angular-48.png'
+import nextJs from './icons/icons8-nextjs-96.png'
+
+
+import ts from './icons/icons8-typescript-48.png'
 import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import Divider from '@mui/material/Divider'
-import ListItemText from '@mui/material/ListItemText'
-import ListItemAvatar from '@mui/material/ListItemAvatar'
+
 import Typography from '@mui/material/Typography'
 import ListItemButton from '@mui/material/ListItemButton'
 import bewerbungsfoto from "../pics/Bewerbungsfoto-XiaoyanHou.jpg"
@@ -228,7 +230,7 @@ export default function AboutMe ({ aboutSection }) {
             variant='outlined'
             color='primary'
             target='_blank'
-            href="https://drive.google.com/file/d/1bYHxqTTxHH3ilQfCXNOK5rOybplB4d5m/view?usp=sharing"
+            href="https://drive.google.com/file/d/152PGrEzAHJgVJe-YRr1ThmMCPJNyEQlF/view"
           >
             View Resume
           </Button>
